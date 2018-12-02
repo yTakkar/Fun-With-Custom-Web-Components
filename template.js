@@ -1,4 +1,4 @@
-// SIMPLE WAY TO CREATE A SHADOW DOM AND USE <TEMPLATE/> AS A PLACEHOLDER TAG 
+// SIMPLE WAY TO CREATE A SHADOW DOM AND USE <TEMPLATE/> AS A PLACEHOLDER TAG
 
 const host = document.querySelector('#shadow-with-template')
 const root = host.attachShadow({ mode: 'open' })
