@@ -4,9 +4,13 @@
   "description": "Custom Web Components",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./index.html -p 4000"
+    "start": "parcel ./index.html -p 4000",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "Faiyaz Shaikh <www.shtakkar@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
