@@ -4,7 +4,8 @@
   "description": "Custom Web Components",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./index.html -p 4000",
+    "start": "parcel index.html -p 4000",
+    "build": "parcel build index.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
