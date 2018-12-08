@@ -1,22 +1,13 @@
 class CountryInfo extends HTMLElement {
   constructor() {
     super()
-    this._country = ''
+    this._country = this.getAttribute('country')
     this._countryInfo = {}
-    
-    let shadowRoot = this.attachShadow({ mode: 'open' })
+    this.shadowRoot = this.attachShadow({ mode: 'open' })
   }
 
   static get observedAttributes() {
     return ['country']
-  }
-
-  get country() {
-    return this._country
-  }
-
-  set country(val) {
-    this._country = val
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -34,12 +25,12 @@ class CountryInfo extends HTMLElement {
       .then(resp => resp.json())
       .then(resp => {
         this._countryInfo = resp[0]
-        this.createTemplate()
+        this.render()
       })
       .catch(err => console.error(err))
   }
 
-  createTemplate() {
+  render() {
     const {
       name,
       area,
@@ -124,7 +115,7 @@ class CountryInfo extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log(`${this.tagName} mounted from the DOM`)
+    console.log(`${this.tagName} mounted into the DOM`)
   }
 
   disconnectedCallback() {
@@ -136,7 +127,7 @@ class CountryInfo extends HTMLElement {
 customElements.define('country-info', CountryInfo)
 
 // CHANGE COUNTRY-INFO'S COUNTRY PROP
-const button = document.querySelector('button')
+const button = document.querySelector('button#get-details')
 const input = document.querySelector('input[type="text"]')
 const customElement = document.querySelector('country-info')
 

@@ -1,4 +1,5 @@
 // import './shadowElement'
 // import './template'
-
+import './customButton'
+import './myInfo'
 import './countryInfo'
