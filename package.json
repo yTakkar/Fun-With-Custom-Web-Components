@@ -10,7 +10,7 @@
     "deploy:surge": "surge -p dist -d https://fun-with-web-components.surge.sh",
     "deploy:netlify": "netlify deploy --prod",
     "deploy": "npm-run-all build deploy:gp deploy:surge deploy:netlify",
-    "test": "echo \"Test passed\" && exit 1"
+    "test": "echo \"Test passed\""
   },
   "keywords": [],
   "author": "Faiyaz Shaikh <www.shtakkar@gmail.com>",
