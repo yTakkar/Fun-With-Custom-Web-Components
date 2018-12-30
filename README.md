@@ -11,5 +11,5 @@ And then visit `http://localhost:4000`
 
 - [GitHub Pages](https://ytakkar.github.io/Fun-With-Custom-Web-Components/)
 - [Surge](https://fun-with-web-components.surge.sh)
-- [Now](fun-with-web-components.now.sh)
+- [Now](https://fun-with-web-components.now.sh/)
 - [Netlify](https://fun-with-web-components.netlify.com/)
