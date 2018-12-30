@@ -6,10 +6,11 @@
   "scripts": {
     "start": "parcel index.html -p 4000",
     "build": "parcel build index.html --public-url ./",
-    "deploy:gp": "gh-pages -d dist", 
+    "deploy:gp": "gh-pages -d dist",
     "deploy:surge": "surge -p dist -d https://fun-with-web-components.surge.sh",
     "deploy:netlify": "netlify deploy --prod",
-    "deploy": "npm-run-all build deploy:gp deploy:surge deploy:netlify"
+    "deploy": "npm-run-all build deploy:gp deploy:surge deploy:netlify",
+    "test": "echo \"Test passed\" && exit 1"
   },
   "keywords": [],
   "author": "Faiyaz Shaikh <www.shtakkar@gmail.com>",
