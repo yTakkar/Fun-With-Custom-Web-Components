@@ -1,20 +1,25 @@
 language: node_js
 node_js: "stable"
 
-cache:
-  yarn: true
-  directories: 
-  - node_modules
+# cache:
+#   yarn: true
+#   directories: 
+#   - node_modules
 
 script:
   - yarn
-  - yarn deploy
+  - yarn build
 
-# deploy:
-#   provider: pages
-#   skip-cleanup: true
-#   github-token: $GITHUB_TOKEN 
-#   keep-history: true
-#   local_dir: dist
-#   on:
-#     branch: master
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN 
+  keep-history: true
+  local_dir: dist
+  on:
+    branch: master
+
+deploy:
+  provider: surge
+  project: dist
+  domain: https://fun-with-web-components.surge.sh
