@@ -1,4 +1,7 @@
 {
   "name": "fun-with-web-components",
-  "version": 2
+  "version": 2,
+  "alias": [
+    "https://fun-with-web-components.now.sh"
+  ]
 }
