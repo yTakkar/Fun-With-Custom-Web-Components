@@ -8,8 +8,9 @@
     "build": "yarn test && parcel build index.html --public-url ./",
     "deploy:gp": "gh-pages -d dist",
     "deploy:surge": "surge -p dist -d https://fun-with-web-components.surge.sh",
+    "deploy:now": "cp now.json dist/now.json && now ./dist && now alias",
     "deploy:netlify": "netlify deploy --prod",
-    "deploy": "npm-run-all build deploy:gp deploy:surge deploy:netlify",
+    "deploy": "npm-run-all build deploy:gp deploy:surge deploy:now deploy:netlify",
     "test": "echo \"Test passed\""
   },
   "keywords": [],
