@@ -1,14 +1,19 @@
 language: node_js
 node_js: "stable"
 
-# cache:
-#   yarn: true
-#   directories: 
-#   - node_modules
+cache:
+  yarn: true
+  directories: 
+  - node_modules
 
 script:
-  - yarn
+  - yarn install
   - yarn build
+  - yarn test
+
+before_deploy:
+  - npm install netlify-cli -g
+  - npm run build
 
 deploy:
   provider: pages
@@ -23,3 +28,10 @@ deploy:
   provider: surge
   project: dist
   domain: https://fun-with-web-components.surge.sh
+
+deploy:
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./dist
+  skip_cleanup: true
+  on:
+    branch: master
