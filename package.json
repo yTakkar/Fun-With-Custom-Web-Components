@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html -p 4000",
-    "build": "parcel build index.html --public-url ./",
+    "build": "yarn test && parcel build index.html --public-url ./",
     "deploy:gp": "gh-pages -d dist",
     "deploy:surge": "surge -p dist -d https://fun-with-web-components.surge.sh",
     "deploy:netlify": "netlify deploy --prod",
@@ -14,6 +14,7 @@
   },
   "keywords": [],
   "author": "Faiyaz Shaikh <www.shtakkar@gmail.com>",
+  "homepage": "https://ytakkar.github.io/Fun-With-Custom-Web-Components",
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^2.0.1",
